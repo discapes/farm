@@ -1,0 +1,20 @@
+name: build_jar
+run-name: Build jar file artifact.
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: "temurin"
+          java-version: "17"
+      - run: bash ./build.sh
+      - uses: actions/upload-artifact@v3
+        with:
+          name: farm-game
+          path: ./farm.jar

@@ -1,0 +1,2 @@
+Main-Class: dev.miikat.farm.Main
+Important-Reminder: The last line is always ignored in MANIFEST.MF

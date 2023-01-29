@@ -1,8 +1,8 @@
-package code;
+package dev.miikat.farm.util;
 
 import java.util.Random;
 
-public class Randomgen {
+public abstract class Randomgen {
 
 	public static String randomString(String[] array) {
 		int random = new Random().nextInt(array.length);
