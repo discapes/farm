@@ -1,4 +1,3 @@
-/bin/
-farm.jar
 *.ser
 /target/
+farm.jar

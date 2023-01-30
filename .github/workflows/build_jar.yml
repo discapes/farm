@@ -13,8 +13,8 @@ jobs:
         with:
           distribution: "temurin"
           java-version: "17"
-      - run: bash ./build.sh
+      - run: mvn package
       - uses: actions/upload-artifact@v3
         with:
           name: farm-game
-          path: ./farm.jar
+          path: ./target/farm-*.jar
