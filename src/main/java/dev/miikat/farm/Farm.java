@@ -70,7 +70,8 @@ public class Farm implements Serializable {
 			out.writeObject(this);
 			out.close();
 			fileOut.close();
-			Console.showDialogue("Serialized data is saved in " + getFileName());
+			Console.showDialogue("Serialized data is saved in " + getFileName() + ".\nIt can be loaded by specifying "
+					+ name + " at the beginning.");
 		} catch (IOException e) {
 			Console.showDialogue("An error occured: \n\n" + Utility.getErrorString(e));
 		}

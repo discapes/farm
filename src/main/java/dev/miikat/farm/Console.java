@@ -1,5 +1,6 @@
 package dev.miikat.farm;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -68,7 +69,16 @@ public abstract class Console {
 	}
 
 	static void clearScreen() {
-		System.out.print("\033c");
+		final String os = System.getProperty("os.name");
+
+		try {
+			if (os.contains("Windows"))
+				new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+			else
+				System.out.print("\033[H\033[2J");
+		} catch (InterruptedException | IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	static void switchFromAltScreen() {

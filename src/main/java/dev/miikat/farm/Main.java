@@ -2,7 +2,6 @@
 package dev.miikat.farm;
 
 import java.io.File;
-import java.lang.StackWalker.Option;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -49,7 +48,7 @@ public abstract class Main {
 							add(new Pair<>("Do an activity", () -> farm.doActivity()));
 						add(new Pair<>("See all animals", () -> farm.seeAllAnimals()));
 						add(new Pair<>("Go to sleep", () -> farm.passDay()));
-						add(new Pair<>("Save to " + farm.getFileName(), () -> farm.saveToFile()));
+						add(new Pair<>("Save to file", () -> farm.saveToFile()));
 					}
 				});
 				opt.run();
