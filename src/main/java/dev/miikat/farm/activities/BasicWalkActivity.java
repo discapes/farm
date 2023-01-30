@@ -15,13 +15,14 @@ public class BasicWalkActivity implements AnimalActivity {
 
 	@Override
 	public boolean isAvailable() {
-		return lastDoneAge < animal.age;
+		return (animal.age - lastDoneAge) >= 2 && farm.energy > 0;
 	}
 
 	@Override
 	public void doActivity() {
 		lastDoneAge = animal.age;
 		animal.speed++;
+		farm.energy--;
 		Console.showDialogue("Yay! Speed +1");
 	}
 

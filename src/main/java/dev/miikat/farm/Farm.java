@@ -17,6 +17,7 @@ import dev.miikat.farm.util.Utility;
 public class Farm implements Serializable {
 	private List<Animal> animals = new ArrayList<>();
 	public String name;
+	public int energy = 3;
 
 	public Farm(String name) {
 		this.name = name;
@@ -32,10 +33,11 @@ public class Farm implements Serializable {
 	}
 
 	public void seeAllAnimals() {
-		var dialogue = new StringBuilder(name + "\n\nNumber of animals: " + numberOfAnimals() + '\n');
-		for (Animal animal : animals)
-			dialogue.append(animal.getInfoMessage() + "\n");
-		Console.showDialogue(dialogue.toString());
+		Console.showDialogue(String.join("\n",
+				name,
+				"Number of animals:" + numberOfAnimals(),
+				"",
+				String.join("\n", animals.stream().map((a) -> a.getInfoMessage()).toList())));
 	}
 
 	public boolean hasFeeder() {
@@ -50,7 +52,8 @@ public class Farm implements Serializable {
 	}
 
 	public void passDay() {
-		Console.showDialogue("Good night! You can now feed and walk the animals again!");
+		energy++;
+		Console.showDialogue("Good morning! You can now feed and walk the animals again!");
 		for (Animal a : animals)
 			a.passDay();
 	}

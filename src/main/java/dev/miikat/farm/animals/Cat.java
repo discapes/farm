@@ -1,8 +1,5 @@
 package dev.miikat.farm.animals;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-
 import dev.miikat.farm.Console;
 import dev.miikat.farm.Farm;
 import dev.miikat.farm.activities.AnimalActivity;

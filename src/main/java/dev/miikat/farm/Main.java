@@ -18,9 +18,8 @@ public abstract class Main {
 			You can feed every animal once a day to improve their strength
 			and take one animal for a walk each day to improve their speed.
 			If you want, you can rename your animals and give them to new homes.
-			Press 1 or 2 to get your first animal.
-			Made by Miika
-				""";
+			Select 2 to get your first animal.
+			Made by Miika""";
 
 	public static void main(String[] args) {
 		Console.switchToAltScreen();
@@ -32,25 +31,24 @@ public abstract class Main {
 			Farm farm = farmResult.get();
 
 			while (!shouldExit.get()) {
-				var opt = Console.pickMenuOption("""
-						Main menu
-						---
-						What would you like to do?
-						""", new ArrayList<Pair<String, NullaryVoidLambda>>() {
-					{
-						add(new Pair<>("Quit", () -> {
-							if (Console.confirm("Are you sure you want to quit?"))
-								shouldExit.set(true);
-						}));
-						add(new Pair<>("Get a new animal", () -> farm.addAnimal(AnimalFactory.fromPrompt(farm))));
-						add(new Pair<>("View the guide and credits", () -> Console.showDialogue(guide)));
-						if (farm.numberOfAnimals() != 0)
-							add(new Pair<>("Do an activity", () -> farm.doActivity()));
-						add(new Pair<>("See all animals", () -> farm.seeAllAnimals()));
-						add(new Pair<>("Go to sleep", () -> farm.passDay()));
-						add(new Pair<>("Save to file", () -> farm.saveToFile()));
-					}
-				});
+				var opt = Console.pickMenuOption(
+						farm.name + "\n---\nWhat would you like to do?",
+						new ArrayList<Pair<String, NullaryVoidLambda>>() {
+							{
+								add(new Pair<>("Quit", () -> {
+									if (Console.confirm("Are you sure you want to quit?"))
+										shouldExit.set(true);
+								}));
+								add(new Pair<>("Get a new animal",
+										() -> farm.addAnimal(AnimalFactory.fromPrompt(farm))));
+								add(new Pair<>("View the guide and credits", () -> Console.showDialogue(guide)));
+								if (farm.numberOfAnimals() != 0)
+									add(new Pair<>("Do an activity", () -> farm.doActivity()));
+								add(new Pair<>("See all animals", () -> farm.seeAllAnimals()));
+								add(new Pair<>("Go to sleep", () -> farm.passDay()));
+								add(new Pair<>("Save to file", () -> farm.saveToFile()));
+							}
+						});
 				opt.run();
 			}
 		}
