@@ -1,6 +1,8 @@
 package dev.miikat.farm.activities;
 
-public interface AnimalActivity {
+import java.io.Serializable;
+
+public interface AnimalActivity extends Serializable {
 	public String getName();
 
 	public boolean isAvailable();

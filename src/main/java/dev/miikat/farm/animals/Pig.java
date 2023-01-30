@@ -12,4 +12,9 @@ public class Pig extends Animal {
 	public void makeSound() {
 		Console.showDialogue("Oink Oink!");
 	}
+
+	@Override
+	public String getGreeting() {
+		return "Oink Oink I'm a pig.";
+	}
 }

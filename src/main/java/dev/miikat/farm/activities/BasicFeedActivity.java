@@ -1,5 +1,6 @@
 package dev.miikat.farm.activities;
 
+import dev.miikat.farm.Console;
 import dev.miikat.farm.animals.Animal;
 
 public class BasicFeedActivity implements AnimalActivity {
@@ -19,7 +20,7 @@ public class BasicFeedActivity implements AnimalActivity {
 	public void doActivity() {
 		lastDoneAge = animal.age;
 		animal.strength++;
-		System.out.println("Yum!");
+		Console.showDialogue("Yum! Strength +1");
 	}
 
 	@Override

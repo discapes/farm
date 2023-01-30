@@ -9,4 +9,9 @@ public abstract class Randomgen {
 		return array[random];
 	}
 
+	public static boolean passes(int percentChance) {
+		int random = new Random().nextInt(100);
+		return random < percentChance;
+	}
+
 }

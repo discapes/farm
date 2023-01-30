@@ -1,5 +1,6 @@
 package dev.miikat.farm.activities;
 
+import dev.miikat.farm.Console;
 import dev.miikat.farm.Farm;
 import dev.miikat.farm.animals.Animal;
 
@@ -21,7 +22,7 @@ public class BasicWalkActivity implements AnimalActivity {
 	public void doActivity() {
 		lastDoneAge = animal.age;
 		animal.speed++;
-		System.out.println("Yay!");
+		Console.showDialogue("Yay! Speed +1");
 	}
 
 	@Override
