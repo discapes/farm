@@ -6,7 +6,6 @@ import dev.miikat.farm.animals.Animal;
 
 public class BasicWalkActivity implements AnimalActivity {
 	Animal animal;
-	Farm farm;
 	int lastDoneAge;
 
 	public BasicWalkActivity(Animal animal) {
@@ -15,7 +14,7 @@ public class BasicWalkActivity implements AnimalActivity {
 
 	@Override
 	public boolean isAvailable() {
-		return (animal.age - lastDoneAge) >= 2 && farm.energy > 0;
+		return (animal.age - lastDoneAge) >= 2 && animal.farm.energy > 0;
 	}
 
 	@Override
