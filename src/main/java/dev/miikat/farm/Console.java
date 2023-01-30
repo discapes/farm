@@ -68,15 +68,15 @@ public abstract class Console {
 	}
 
 	static void clearScreen() {
-		System.out.print("\033[H\033[2J");
+		System.out.print("\033c");
 	}
 
 	static void switchFromAltScreen() {
-		System.out.print("\u001B[?1049l");
+		System.out.print("\033[?1049l");
 	}
 
 	static void switchToAltScreen() {
-		System.out.print("\u001B[?1049h");
+		System.out.print("\033[?1049h");
 	}
 
 }
