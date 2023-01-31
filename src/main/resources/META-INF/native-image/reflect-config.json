@@ -39,7 +39,8 @@
   "name":"com.google.inject.assistedinject.FactoryProvider2",
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
-  "queryAllDeclaredConstructors":true
+  "queryAllDeclaredConstructors":true,
+  "allDeclaredMethods": true
 },
 {
   "name":"com.google.inject.assistedinject.FactoryProvider2$$FastClassByGuice$$3293200",
@@ -301,6 +302,10 @@
   "queryAllDeclaredMethods":true
 },
 {
+  "name":"com.thoughtworks.xstream.io.xml.XmlFriendlyNameCoder",
+  "methods":[{"name":"clone","parameterTypes":[] }]
+},
+{
   "name":"com.thoughtworks.xstream.mapper.AnnotationConfiguration"
 },
 {
@@ -334,6 +339,9 @@
 {
   "name":"com.thoughtworks.xstream.mapper.DynamicProxyMapper",
   "queryAllPublicMethods":true
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.DynamicProxyMapper$DynamicProxy"
 },
 {
   "name":"com.thoughtworks.xstream.mapper.ElementIgnoringMapper",
@@ -415,9 +423,11 @@
 },
 {
   "name":"dev.miikat.farm.Farm",
+  "allPublicConstructors": true,
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
-  "queryAllDeclaredConstructors":true
+  "queryAllDeclaredConstructors":true,
+  "unsafeAllocated":true
 },
 {
   "name":"dev.miikat.farm.Farm$$FastClassByGuice$$4299641",
@@ -463,6 +473,7 @@
   "allDeclaredFields":true,
   "queryAllDeclaredMethods":true,
   "queryAllDeclaredConstructors":true,
+  "unsafeAllocated":true,
   "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
@@ -481,6 +492,39 @@
   "fields":[{"name":"GUICE$INVOKERS"}]
 },
 {
+  "name":"dev.miikat.farm.activities.BasicFeedActivity",
+  "allDeclaredFields":true,
+  "unsafeAllocated":true
+},
+{
+  "name":"dev.miikat.farm.activities.BasicWalkActivity",
+  "allDeclaredFields":true,
+  "unsafeAllocated":true
+},
+{
+  "name":"dev.miikat.farm.animals.Animal",
+  "allDeclaredFields":true
+},
+{
+  "name":"dev.miikat.farm.animals.Cat",
+  "allDeclaredFields":true,
+  "unsafeAllocated":true
+},
+{
+  "name":"dev.miikat.farm.animals.Cat$PetActivity",
+  "allDeclaredFields":true,
+  "unsafeAllocated":true
+},
+{
+  "name":"dev.miikat.farm.animals.Pig",
+  "allDeclaredFields":true,
+  "unsafeAllocated":true
+},
+{
+  "name":"io.github.xstream.mxparser.MXParser",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
   "name":"java.awt.Color"
 },
 {
@@ -490,7 +534,19 @@
   "name":"java.awt.font.TextAttribute"
 },
 {
+  "name":"java.io.Externalizable"
+},
+{
   "name":"java.io.File"
+},
+{
+  "name":"java.io.ObjectInputStream"
+},
+{
+  "name":"java.io.ObjectOutputStream"
+},
+{
+  "name":"java.io.Serializable"
 },
 {
   "name":"java.lang.Boolean",
@@ -763,7 +819,8 @@
   "name":"java.time.temporal.WeekFields"
 },
 {
-  "name":"java.util.ArrayList"
+  "name":"java.util.ArrayList",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
 },
 {
   "name":"java.util.BitSet"
