@@ -1,38 +1,5 @@
 {
   "types":[
-    {
-      "name":"dev.miikat.farm.Farm"
-    },
-    {
-      "name":"dev.miikat.farm.activities.BasicFeedActivity"
-    },
-    {
-      "name":"dev.miikat.farm.activities.BasicWalkActivity"
-    },
-    {
-      "name":"dev.miikat.farm.animals.Animal"
-    },
-    {
-      "name":"dev.miikat.farm.animals.Animal$Gender"
-    },
-    {
-      "name":"dev.miikat.farm.animals.Cat"
-    },
-    {
-      "name":"dev.miikat.farm.animals.Cat$PetActivity"
-    },
-    {
-      "name":"dev.miikat.farm.animals.Pig"
-    },
-    {
-      "name":"java.lang.Enum"
-    },
-    {
-      "name":"java.lang.String"
-    },
-    {
-      "name":"java.util.ArrayList"
-    }
   ],
   "lambdaCapturingTypes":[
   ],

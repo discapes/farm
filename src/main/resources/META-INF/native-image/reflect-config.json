@@ -1,6 +1,895 @@
 [
 {
-  "name":"sun.security.provider.SHA",
+  "name":"[Ljava.lang.Object;"
+},
+{
+  "name":"[Ljava.lang.String;"
+},
+{
+  "name":"[Ljava.lang.invoke.MethodHandles$Lookup$ClassOption;"
+},
+{
+  "name":"com.google.common.util.concurrent.AbstractFuture",
+  "fields":[
+    {"name":"listeners"}, 
+    {"name":"value"}, 
+    {"name":"waiters"}
+  ]
+},
+{
+  "name":"com.google.common.util.concurrent.AbstractFuture$Waiter",
+  "fields":[
+    {"name":"next"}, 
+    {"name":"thread"}
+  ]
+},
+{
+  "name":"com.google.inject.AbstractModule",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.google.inject.assistedinject.Assisted",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.google.inject.assistedinject.FactoryModuleBuilder$1",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.google.inject.assistedinject.FactoryProvider2",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"com.google.inject.assistedinject.FactoryProvider2$$FastClassByGuice$$3293200",
+  "fields":[{"name":"GUICE$INVOKERS"}]
+},
+{
+  "name":"com.google.inject.assistedinject.FactoryProvider2$2",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.google.inject.assistedinject.FactoryProvider2$ThreadLocalProvider",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.google.inject.internal.Annotations",
+  "methods":[{"name":"determineAnnotationToStringConfig","parameterTypes":[] }]
+},
+{
+  "name":"com.google.inject.internal.InjectorShell$InheritedScannersModule",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.google.inject.internal.InjectorShell$RootModule",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.google.inject.internal.UniqueAnnotations$Internal",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.google.inject.util.Modules$EmptyModule",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.sun.org.apache.xerces.internal.jaxp.datatype.DatatypeFactoryImpl",
   "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.ConverterLookup"
+},
+{
+  "name":"com.thoughtworks.xstream.converters.ConverterRegistry"
+},
+{
+  "name":"com.thoughtworks.xstream.converters.basic.StringBuilderConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.basic.UUIDConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.enums.EnumConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.enums.EnumMapConverter",
+  "methods":[{"name":"<init>","parameterTypes":["com.thoughtworks.xstream.mapper.Mapper"] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.enums.EnumSetConverter",
+  "methods":[{"name":"<init>","parameterTypes":["com.thoughtworks.xstream.mapper.Mapper"] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.extended.AtomicBooleanConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.extended.AtomicIntegerConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.extended.AtomicLongConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.extended.AtomicReferenceConverter",
+  "methods":[{"name":"<init>","parameterTypes":["com.thoughtworks.xstream.mapper.Mapper"] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.extended.CharsetConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.extended.CurrencyConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.extended.DurationConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.extended.OptionalConverter",
+  "methods":[{"name":"<init>","parameterTypes":["com.thoughtworks.xstream.mapper.Mapper"] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.extended.OptionalDoubleConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.extended.OptionalIntConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.extended.OptionalLongConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.extended.PathConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.extended.RegexPatternConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.extended.StackTraceElementConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.extended.StackTraceElementFactory15",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.extended.SubjectConverter",
+  "methods":[{"name":"<init>","parameterTypes":["com.thoughtworks.xstream.mapper.Mapper"] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.extended.ThrowableConverter",
+  "methods":[{"name":"<init>","parameterTypes":["com.thoughtworks.xstream.converters.ConverterLookup"] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.reflection.FieldUtil15",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.reflection.LambdaConverter",
+  "methods":[{"name":"<init>","parameterTypes":["com.thoughtworks.xstream.mapper.Mapper","com.thoughtworks.xstream.converters.reflection.ReflectionProvider","com.thoughtworks.xstream.core.ClassLoaderReference"] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.reflection.PureJavaReflectionProvider"
+},
+{
+  "name":"com.thoughtworks.xstream.converters.reflection.ReflectionProvider"
+},
+{
+  "name":"com.thoughtworks.xstream.converters.reflection.SunUnsafeReflectionProvider",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.ChronologyConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.DurationConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.HijrahDateConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.InstantConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.JapaneseDateConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.JapaneseEraConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.LocalDateConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.LocalDateTimeConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.LocalTimeConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.MinguoDateConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.MonthDayConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.OffsetDateTimeConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.OffsetTimeConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.PeriodConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.SystemClockConverter",
+  "methods":[{"name":"<init>","parameterTypes":["com.thoughtworks.xstream.mapper.Mapper"] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.ThaiBuddhistDateConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.ValueRangeConverter",
+  "methods":[{"name":"<init>","parameterTypes":["com.thoughtworks.xstream.mapper.Mapper"] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.WeekFieldsConverter",
+  "methods":[{"name":"<init>","parameterTypes":["com.thoughtworks.xstream.mapper.Mapper"] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.YearConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.YearMonthConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.ZoneIdConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.converters.time.ZonedDateTimeConverter",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.core.ClassLoaderReference"
+},
+{
+  "name":"com.thoughtworks.xstream.core.JVM"
+},
+{
+  "name":"com.thoughtworks.xstream.core.JVM$Test",
+  "allDeclaredFields":true,
+  "unsafeAllocated":true
+},
+{
+  "name":"com.thoughtworks.xstream.core.util.Base64JavaUtilCodec",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"com.thoughtworks.xstream.core.util.CustomObjectOutputStream"
+},
+{
+  "name":"com.thoughtworks.xstream.core.util.SerializationMembers$1",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.AnnotationConfiguration"
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.AnnotationMapper",
+  "queryAllPublicMethods":true,
+  "methods":[{"name":"<init>","parameterTypes":["com.thoughtworks.xstream.mapper.Mapper","com.thoughtworks.xstream.converters.ConverterRegistry","com.thoughtworks.xstream.converters.ConverterLookup","com.thoughtworks.xstream.core.ClassLoaderReference","com.thoughtworks.xstream.converters.reflection.ReflectionProvider"] }]
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.ArrayMapper",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.AttributeAliasingMapper",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.AttributeMapper",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.ClassAliasingMapper",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.DefaultImplementationsMapper",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.DefaultMapper"
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.DynamicProxyMapper",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.ElementIgnoringMapper",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.EnumMapper",
+  "queryAllPublicMethods":true,
+  "methods":[{"name":"<init>","parameterTypes":["com.thoughtworks.xstream.mapper.Mapper"] }]
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.FieldAliasingMapper",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.ImmutableTypesMapper",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.ImplicitCollectionMapper",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.LambdaMapper",
+  "queryAllPublicMethods":true,
+  "methods":[{"name":"<init>","parameterTypes":["com.thoughtworks.xstream.mapper.Mapper"] }]
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.LocalConversionMapper",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.Mapper"
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.Mapper$Null"
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.MapperWrapper"
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.OuterClassMapper",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.PackageAliasingMapper",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.SecurityMapper",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.thoughtworks.xstream.mapper.SystemAttributeAliasingMapper",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"com.thoughtworks.xstream.security.ArrayTypePermission"
+},
+{
+  "name":"com.thoughtworks.xstream.security.InterfaceTypePermission"
+},
+{
+  "name":"com.thoughtworks.xstream.security.NoTypePermission"
+},
+{
+  "name":"com.thoughtworks.xstream.security.PrimitiveTypePermission"
+},
+{
+  "name":"dev.miikat.farm.AnimalFactory",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"dev.miikat.farm.AnimalFactory$$FastClassByGuice$$5248035",
+  "fields":[{"name":"GUICE$INVOKERS"}]
+},
+{
+  "name":"dev.miikat.farm.Farm",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true
+},
+{
+  "name":"dev.miikat.farm.Farm$$FastClassByGuice$$4299641",
+  "fields":[{"name":"GUICE$INVOKERS"}]
+},
+{
+  "name":"dev.miikat.farm.FarmFactory",
+  "queryAllPublicMethods":true
+},
+{
+  "name":"dev.miikat.farm.FarmGame",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"dev.miikat.farm.FileStorage",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"dev.miikat.farm.FileStorage$$FastClassByGuice$$1100663",
+  "fields":[{"name":"GUICE$INVOKERS"}]
+},
+{
+  "name":"dev.miikat.farm.GuiceModule",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"dev.miikat.farm.SaveLoader",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"dev.miikat.farm.SaveLoader$$FastClassByGuice$$6616833",
+  "fields":[{"name":"GUICE$INVOKERS"}]
+},
+{
+  "name":"dev.miikat.farm.SystemConsole",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"dev.miikat.farm.SystemConsole$$FastClassByGuice$$434693",
+  "fields":[{"name":"GUICE$INVOKERS"}]
+},
+{
+  "name":"dev.miikat.farm.XStreamSerializer",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true,
+  "queryAllDeclaredConstructors":true,
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"dev.miikat.farm.XStreamSerializer$$FastClassByGuice$$2211053",
+  "fields":[{"name":"GUICE$INVOKERS"}]
+},
+{
+  "name":"java.awt.Color"
+},
+{
+  "name":"java.awt.Font"
+},
+{
+  "name":"java.awt.font.TextAttribute"
+},
+{
+  "name":"java.io.File"
+},
+{
+  "name":"java.lang.Boolean",
+  "methods":[{"name":"parseBoolean","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"java.lang.Byte",
+  "methods":[{"name":"parseByte","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"java.lang.Character"
+},
+{
+  "name":"java.lang.Class"
+},
+{
+  "name":"java.lang.ClassLoader",
+  "methods":[{"name":"registerAsParallelCapable","parameterTypes":[] }]
+},
+{
+  "name":"java.lang.ClassLoader$$DefineAccessByGuice$$/0x0000000800ca4400",
+  "methods":[{"name":"<init>","parameterTypes":[] }]
+},
+{
+  "name":"java.lang.Double",
+  "methods":[{"name":"parseDouble","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"java.lang.Enum"
+},
+{
+  "name":"java.lang.Float",
+  "methods":[{"name":"parseFloat","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"java.lang.Integer",
+  "methods":[{"name":"parseInt","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"java.lang.Long",
+  "methods":[{"name":"parseLong","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"java.lang.Number"
+},
+{
+  "name":"java.lang.Object",
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"java.lang.Short",
+  "methods":[{"name":"parseShort","parameterTypes":["java.lang.String"] }]
+},
+{
+  "name":"java.lang.StackTraceElement"
+},
+{
+  "name":"java.lang.String"
+},
+{
+  "name":"java.lang.StringBuffer"
+},
+{
+  "name":"java.lang.StringBuilder"
+},
+{
+  "name":"java.lang.ThreadLocal",
+  "allDeclaredFields":true,
+  "queryAllDeclaredMethods":true
+},
+{
+  "name":"java.lang.Throwable"
+},
+{
+  "name":"java.lang.Void"
+},
+{
+  "name":"java.lang.invoke.MethodHandles$Lookup",
+  "fields":[{"name":"IMPL_LOOKUP"}],
+  "methods":[{"name":"defineHiddenClass","parameterTypes":["byte[]","boolean","java.lang.invoke.MethodHandles$Lookup$ClassOption[]"] }]
+},
+{
+  "name":"java.lang.invoke.MethodHandles$Lookup$ClassOption"
+},
+{
+  "name":"java.lang.invoke.SerializedLambda"
+},
+{
+  "name":"java.lang.reflect.Constructor"
+},
+{
+  "name":"java.lang.reflect.Field"
+},
+{
+  "name":"java.lang.reflect.Member"
+},
+{
+  "name":"java.lang.reflect.Method"
+},
+{
+  "name":"java.math.BigDecimal"
+},
+{
+  "name":"java.math.BigInteger"
+},
+{
+  "name":"java.net.URI"
+},
+{
+  "name":"java.net.URL"
+},
+{
+  "name":"java.nio.charset.Charset"
+},
+{
+  "name":"java.nio.file.Path"
+},
+{
+  "name":"java.nio.file.Paths",
+  "methods":[{"name":"get","parameterTypes":["java.lang.String","java.lang.String[]"] }]
+},
+{
+  "name":"java.sql.Date"
+},
+{
+  "name":"java.sql.Time"
+},
+{
+  "name":"java.sql.Timestamp"
+},
+{
+  "name":"java.text.AttributedCharacterIterator$Attribute"
+},
+{
+  "name":"java.text.DecimalFormatSymbols"
+},
+{
+  "name":"java.time.Clock"
+},
+{
+  "name":"java.time.Clock$FixedClock"
+},
+{
+  "name":"java.time.Clock$OffsetClock"
+},
+{
+  "name":"java.time.Clock$SystemClock"
+},
+{
+  "name":"java.time.Clock$TickClock"
+},
+{
+  "name":"java.time.DayOfWeek"
+},
+{
+  "name":"java.time.Duration"
+},
+{
+  "name":"java.time.Instant"
+},
+{
+  "name":"java.time.LocalDate"
+},
+{
+  "name":"java.time.LocalDateTime"
+},
+{
+  "name":"java.time.LocalTime"
+},
+{
+  "name":"java.time.Month"
+},
+{
+  "name":"java.time.MonthDay"
+},
+{
+  "name":"java.time.OffsetDateTime"
+},
+{
+  "name":"java.time.OffsetTime"
+},
+{
+  "name":"java.time.Period"
+},
+{
+  "name":"java.time.Ser"
+},
+{
+  "name":"java.time.Year"
+},
+{
+  "name":"java.time.YearMonth"
+},
+{
+  "name":"java.time.ZoneId"
+},
+{
+  "name":"java.time.ZoneOffset"
+},
+{
+  "name":"java.time.ZoneRegion"
+},
+{
+  "name":"java.time.ZonedDateTime"
+},
+{
+  "name":"java.time.chrono.Chronology"
+},
+{
+  "name":"java.time.chrono.HijrahChronology"
+},
+{
+  "name":"java.time.chrono.HijrahDate"
+},
+{
+  "name":"java.time.chrono.HijrahEra"
+},
+{
+  "name":"java.time.chrono.IsoChronology"
+},
+{
+  "name":"java.time.chrono.JapaneseChronology"
+},
+{
+  "name":"java.time.chrono.JapaneseDate"
+},
+{
+  "name":"java.time.chrono.JapaneseEra"
+},
+{
+  "name":"java.time.chrono.MinguoChronology"
+},
+{
+  "name":"java.time.chrono.MinguoDate"
+},
+{
+  "name":"java.time.chrono.MinguoEra"
+},
+{
+  "name":"java.time.chrono.Ser"
+},
+{
+  "name":"java.time.chrono.ThaiBuddhistChronology"
+},
+{
+  "name":"java.time.chrono.ThaiBuddhistDate"
+},
+{
+  "name":"java.time.chrono.ThaiBuddhistEra"
+},
+{
+  "name":"java.time.temporal.ChronoField"
+},
+{
+  "name":"java.time.temporal.ChronoUnit"
+},
+{
+  "name":"java.time.temporal.IsoFields$Field"
+},
+{
+  "name":"java.time.temporal.IsoFields$Unit"
+},
+{
+  "name":"java.time.temporal.JulianFields$Field"
+},
+{
+  "name":"java.time.temporal.ValueRange"
+},
+{
+  "name":"java.time.temporal.WeekFields"
+},
+{
+  "name":"java.util.ArrayList"
+},
+{
+  "name":"java.util.BitSet"
+},
+{
+  "name":"java.util.Calendar"
+},
+{
+  "name":"java.util.Collection"
+},
+{
+  "name":"java.util.Currency"
+},
+{
+  "name":"java.util.Date"
+},
+{
+  "name":"java.util.EnumMap"
+},
+{
+  "name":"java.util.EnumSet"
+},
+{
+  "name":"java.util.GregorianCalendar"
+},
+{
+  "name":"java.util.HashMap"
+},
+{
+  "name":"java.util.HashSet"
+},
+{
+  "name":"java.util.Hashtable"
+},
+{
+  "name":"java.util.LinkedHashMap"
+},
+{
+  "name":"java.util.LinkedHashSet"
+},
+{
+  "name":"java.util.LinkedList"
+},
+{
+  "name":"java.util.List"
+},
+{
+  "name":"java.util.Locale"
+},
+{
+  "name":"java.util.Map"
+},
+{
+  "name":"java.util.Map$Entry"
+},
+{
+  "name":"java.util.Optional"
+},
+{
+  "name":"java.util.OptionalDouble"
+},
+{
+  "name":"java.util.OptionalInt"
+},
+{
+  "name":"java.util.OptionalLong"
+},
+{
+  "name":"java.util.Properties"
+},
+{
+  "name":"java.util.Set"
+},
+{
+  "name":"java.util.SortedSet"
+},
+{
+  "name":"java.util.TimeZone"
+},
+{
+  "name":"java.util.TreeMap"
+},
+{
+  "name":"java.util.TreeSet"
+},
+{
+  "name":"java.util.UUID"
+},
+{
+  "name":"java.util.Vector"
+},
+{
+  "name":"java.util.concurrent.ConcurrentHashMap"
+},
+{
+  "name":"java.util.concurrent.atomic.AtomicBoolean"
+},
+{
+  "name":"java.util.concurrent.atomic.AtomicInteger"
+},
+{
+  "name":"java.util.concurrent.atomic.AtomicLong"
+},
+{
+  "name":"java.util.concurrent.atomic.AtomicReference"
+},
+{
+  "name":"java.util.regex.Pattern"
+},
+{
+  "name":"javax.security.auth.Subject"
+},
+{
+  "name":"javax.swing.LookAndFeel"
+},
+{
+  "name":"javax.xml.datatype.Duration"
+},
+{
+  "name":"sun.misc.Unsafe",
+  "allDeclaredFields":true,
+  "methods":[
+    {"name":"allocateInstance","parameterTypes":["java.lang.Class"] }, 
+    {"name":"getObject","parameterTypes":["java.lang.Object","long"] }, 
+    {"name":"staticFieldBase","parameterTypes":["java.lang.reflect.Field"] }, 
+    {"name":"staticFieldOffset","parameterTypes":["java.lang.reflect.Field"] }
+  ]
 }
 ]
