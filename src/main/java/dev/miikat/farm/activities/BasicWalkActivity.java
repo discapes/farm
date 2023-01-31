@@ -1,14 +1,16 @@
 package dev.miikat.farm.activities;
 
 import dev.miikat.farm.Console;
-import dev.miikat.farm.Farm;
 import dev.miikat.farm.animals.Animal;
 
 public class BasicWalkActivity implements AnimalActivity {
 	Animal animal;
 	int lastDoneAge;
 
-	public BasicWalkActivity(Animal animal) {
+	private Console console;
+
+	public BasicWalkActivity(Console console, Animal animal) {
+		this.console = console;
 		this.animal = animal;
 	}
 
@@ -21,8 +23,8 @@ public class BasicWalkActivity implements AnimalActivity {
 	public void doActivity() {
 		lastDoneAge = animal.age;
 		animal.speed++;
-		farm.energy--;
-		Console.showDialogue("Yay! Speed +1");
+		animal.farm.energy--;
+		console.showDialogue("Yay! Speed +1");
 	}
 
 	@Override

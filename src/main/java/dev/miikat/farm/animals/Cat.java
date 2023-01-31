@@ -1,11 +1,17 @@
 package dev.miikat.farm.animals;
 
+import com.google.inject.Inject;
+
 import dev.miikat.farm.Console;
 import dev.miikat.farm.Farm;
 import dev.miikat.farm.activities.AnimalActivity;
 import dev.miikat.farm.util.Randomgen;
 
 public class Cat extends Animal {
+
+	@Inject
+	private Console console;
+
 	private class PetActivity implements AnimalActivity {
 
 		@Override
@@ -21,9 +27,9 @@ public class Cat extends Animal {
 		@Override
 		public void doActivity() {
 			if (happiness < 12)
-				Console.showDialogue("YAAY Im beeing petted");
+				console.showDialogue("YAAY Im beeing petted");
 			else
-				Console.showDialogue("YAAY Im beeing petted ! Pet me again !");
+				console.showDialogue("YAAY Im beeing petted ! Pet me again !");
 
 			happiness++;
 		}
@@ -31,14 +37,14 @@ public class Cat extends Animal {
 
 	int happiness = 5;
 
-	public Cat(Farm farm, String name, Gender gender) {
-		super(farm, name, gender, "Cat");
+	public Cat(Console console, Farm farm, String name, Gender gender) {
+		super(console, farm, name, gender, "Cat");
 		activities.add(new PetActivity());
 	}
 
 	@Override
 	public void makeSound() {
-		Console.showDialogue("Meow!");
+		console.showDialogue("Meow!");
 	}
 
 	@Override

@@ -13,7 +13,7 @@ import dev.miikat.farm.util.Pair;
 import dev.miikat.farm.util.Utility;
 
 public abstract class Animal implements Serializable {
-	public enum Gender {
+	public static enum Gender {
 		MALE, FEMALE
 	}
 
@@ -27,12 +27,15 @@ public abstract class Animal implements Serializable {
 	public Gender gender;
 	public List<AnimalActivity> activities = new ArrayList<>();
 
+	protected Console console;
+
 	public void setName(String name) {
 		String capName = Utility.capitalize(name);
 		this.name = capName;
 	}
 
-	public Animal(Farm farm, String name, Gender gender, String species) {
+	public Animal(Console console, Farm farm, String name, Gender gender, String species) {
+		this.console = console;
 		this.name = Utility.capitalize(name);
 		this.farm = farm;
 		this.gender = gender;
@@ -40,8 +43,8 @@ public abstract class Animal implements Serializable {
 		this.speed = (int) (Math.random() * 20 + 1);
 		this.strength = (int) (Math.random() * 20 + 1);
 		this.age = (int) (Math.random() * 50 + 50);
-		activities.add(new BasicFeedActivity(this));
-		activities.add(new BasicWalkActivity(this));
+		activities.add(new BasicFeedActivity(console, this));
+		activities.add(new BasicWalkActivity(console, this));
 	}
 
 	public String getInfoMessage() {
@@ -56,12 +59,12 @@ public abstract class Animal implements Serializable {
 
 	public void doActivity() {
 
-		AnimalActivity activity = Console.pickMenuOption(getGreeting() + "\n\nWhich activity would you like to select?",
+		AnimalActivity activity = console.pickMenuOption(getGreeting() + "\n\nWhich activity would you like to select?",
 				activities.stream().filter((a) -> a.isAvailable()).map((a) -> new Pair<>(a.getName(), a)).toList());
 		activity.doActivity();
 	}
 
-	public void dailyUpdate() {
+	protected void dailyUpdate() {
 
 	}
 

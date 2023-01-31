@@ -4,13 +4,13 @@ import dev.miikat.farm.Console;
 import dev.miikat.farm.Farm;
 
 public class Pig extends Animal {
-
-	public Pig(Farm farm, String name, Gender gender) {
-		super(farm, name, gender, "Pig");
+	public Pig(Console console, Farm farm, String name, Gender gender) {
+		super(console, farm, name, gender, "Pig");
 	}
 
+	@Override
 	public void makeSound() {
-		Console.showDialogue("Oink Oink!");
+		console.showDialogue("Oink Oink!");
 	}
 
 	@Override

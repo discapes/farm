@@ -1,26 +1,41 @@
 package dev.miikat.farm;
 
-import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.mockito.ArgumentMatchers.argThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.verify;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
+import dev.miikat.farm.animals.Cat;
+
+@ExtendWith(MockitoExtension.class)
 public class FarmTest {
     private Farm farm;
+    @Mock
+    private Console console;
 
-    @Before
+    @BeforeEach
     public void setUp() {
-        farm = new Farm("test");
+        farm = new Farm(console, "test");
     }
 
-    @After
+    @AfterEach
     public void tearDown() {
         farm = null;
     }
 
     @Test
-    public void shouldAnswerWithTrue() {
-        assertTrue(true);
+    public void shouldDisplayAnimalCount() {
+        farm.seeAllAnimals();
+        verify(console).showDialogue(argThat(s -> s.contains("Number of animals: 0")));
+        farm.addAnimal(mock(Cat.class));
+        farm.seeAllAnimals();
+        verify(console).showDialogue(argThat(s -> s.contains("Number of animals: 1")));
     }
 }

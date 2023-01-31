@@ -1,5 +1,7 @@
 package dev.miikat.farm.activities;
 
+import com.google.inject.Inject;
+
 import dev.miikat.farm.Console;
 import dev.miikat.farm.animals.Animal;
 
@@ -7,7 +9,10 @@ public class BasicFeedActivity implements AnimalActivity {
 	Animal animal;
 	int lastDoneAge;
 
-	public BasicFeedActivity(Animal animal) {
+	private Console console;
+
+	public BasicFeedActivity(Console console, Animal animal) {
+		this.console = console;
 		this.animal = animal;
 	}
 
@@ -20,7 +25,7 @@ public class BasicFeedActivity implements AnimalActivity {
 	public void doActivity() {
 		lastDoneAge = animal.age;
 		animal.strength++;
-		Console.showDialogue("Yum! Strength +1");
+		console.showDialogue("Yum! Strength +1");
 	}
 
 	@Override
