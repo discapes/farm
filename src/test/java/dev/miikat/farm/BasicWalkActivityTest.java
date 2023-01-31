@@ -2,14 +2,18 @@ package dev.miikat.farm;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
-import static org.mockito.Mockito.mockingDetails;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+
+import com.google.inject.Guice;
+import com.google.inject.Inject;
+import com.google.inject.testing.fieldbinder.Bind;
+import com.google.inject.testing.fieldbinder.BoundFieldModule;
+import com.google.inject.util.Modules;
 
 import dev.miikat.farm.activities.BasicWalkActivity;
 import dev.miikat.farm.animals.Animal;
@@ -21,22 +25,23 @@ public class BasicWalkActivityTest {
 	private Animal animal;
 	private Farm farm;
 	private BasicWalkActivity activity;
+
 	@Mock
+	@Bind
 	private Console console;
+	@Bind
+	private Serializer ser = new XStreamTestSerializer();
+	@Inject
+	FarmFactory farmFactory;
 
 	@BeforeEach
 	public void setUp() {
-		farm = new Farm(console, "tess");
+		Guice.createInjector(Modules.override(new GuiceModule()).with(BoundFieldModule.of(this))).injectMembers(this);
+
+		farm = farmFactory.create("foo");
 		animal = new Cat(console, farm, "foo", Gender.MALE);
 		farm.addAnimal(animal);
 		activity = new BasicWalkActivity(console, animal);
-	}
-
-	@AfterEach
-	public void tearDown() {
-		animal = null;
-		farm = null;
-		activity = null;
 	}
 
 	@Test

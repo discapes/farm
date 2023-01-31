@@ -1,6 +1,7 @@
 package dev.miikat.farm;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Optional;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -9,6 +10,7 @@ import com.google.inject.Inject;
 
 import dev.miikat.farm.lambda.NullaryVoidLambda;
 import dev.miikat.farm.util.Pair;
+import dev.miikat.farm.util.Utility;
 
 public class FarmGame {
 	@Inject
@@ -16,7 +18,9 @@ public class FarmGame {
 	@Inject
 	private FarmFactory farmFactory;
 	@Inject
-	AnimalFactory animalFactory;
+	private AnimalFactory animalFactory;
+	@Inject
+	private SaveLoader saves;
 
 	private static final String guide = """
 			Welcome to the farm!
@@ -54,7 +58,7 @@ public class FarmGame {
 									add(new Pair<>("Do an activity", () -> farm.doActivity()));
 								add(new Pair<>("See all animals", () -> farm.seeAllAnimals()));
 								add(new Pair<>("Go to sleep", () -> farm.passDay()));
-								add(new Pair<>("Save to file", () -> farm.saveToFile()));
+								add(new Pair<>("Save to file", () -> saveFarmToFile(farm)));
 							}
 						});
 				opt.run();
@@ -75,12 +79,32 @@ public class FarmGame {
 
 		if (farm.isEmpty() && console
 				.confirm("A existing farm was found with that name (" + fileName + "). Use it?"))
-			farm = farmFactory.fromFile(fileName);
+			farm = loadFarmFromFile(fileName);
 
 		if (farm.isEmpty() && console.confirm("Do you want to create a new farm with the name " + farmName
 				+ "? Saving it will overwrite the old one!"))
 			farm = Optional.of(farmFactory.create(farmName));
 
 		return farm;
+	}
+
+	private Optional<Farm> loadFarmFromFile(String fileName) {
+		try {
+			return Optional.of((Farm) saves.load(fileName));
+		} catch (Exception i) {
+			console.showDialogue("An error occured: \n\n" + Utility.getErrorString(i));
+			return Optional.empty();
+		}
+	}
+
+	public void saveFarmToFile(Farm farm) {
+		try {
+			saves.save(farm, farm.getFileName());
+			console.showDialogue(
+					"Serialized data is saved in " + farm.getFileName() + ".\nIt can be loaded by specifying "
+							+ farm.name + " at the beginning.");
+		} catch (IOException e) {
+			console.showDialogue("An error occured: \n\n" + Utility.getErrorString(e));
+		}
 	}
 }

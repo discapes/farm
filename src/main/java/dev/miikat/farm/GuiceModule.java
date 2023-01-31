@@ -8,7 +8,9 @@ public class GuiceModule extends AbstractModule {
 	@Override
 	protected void configure() {
 		bind(Console.class).to(SystemConsole.class);
-		// install(new FactoryModuleBuilder()
-		// .build(FarmFactory.class));
+		bind(PersistentStorage.class).to(FileStorage.class);
+		bind(Serializer.class).to(XStreamSerializer.class);
+		install(new FactoryModuleBuilder()
+				.build(FarmFactory.class));
 	}
 }

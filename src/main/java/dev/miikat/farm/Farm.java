@@ -1,25 +1,25 @@
 package dev.miikat.farm;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.google.inject.Inject;
+import com.google.inject.assistedinject.Assisted;
+
 import dev.miikat.farm.animals.Animal;
 import dev.miikat.farm.util.Pair;
-import dev.miikat.farm.util.Utility;
 
 public class Farm implements Serializable {
 	private List<Animal> animals = new ArrayList<>();
 	public String name;
 	public int energy = 3;
 
+	@Inject
 	private Console console;
 
-	public Farm(Console console, String name) {
-		this.console = console;
+	@Inject
+	public Farm(@Assisted String name) {
 		this.name = name;
 	}
 
@@ -63,20 +63,6 @@ public class Farm implements Serializable {
 	}
 
 	public static String getFileName(String farmName) {
-		return farmName.toLowerCase().replace(' ', '_') + ".ser";
-	}
-
-	public void saveToFile() {
-		try {
-			FileOutputStream fileOut = new FileOutputStream(getFileName());
-			ObjectOutputStream out = new ObjectOutputStream(fileOut);
-			out.writeObject(this);
-			out.close();
-			fileOut.close();
-			console.showDialogue("Serialized data is saved in " + getFileName() + ".\nIt can be loaded by specifying "
-					+ name + " at the beginning.");
-		} catch (IOException e) {
-			console.showDialogue("An error occured: \n\n" + Utility.getErrorString(e));
-		}
+		return farmName.toLowerCase().replace(' ', '_') + ".farm";
 	}
 }

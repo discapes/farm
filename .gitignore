@@ -1,3 +1,4 @@
 *.ser
 /target/
 farm.jar
+*.farm

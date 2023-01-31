@@ -1,33 +1,38 @@
 package dev.miikat.farm;
 
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.argThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 
+import com.google.inject.Guice;
+import com.google.inject.Inject;
+import com.google.inject.testing.fieldbinder.Bind;
+import com.google.inject.testing.fieldbinder.BoundFieldModule;
+import com.google.inject.util.Modules;
+
 import dev.miikat.farm.animals.Cat;
 
 @ExtendWith(MockitoExtension.class)
 public class FarmTest {
-    private Farm farm;
+    @Inject
+    private FarmFactory farmFactory;
+
     @Mock
+    @Bind
     private Console console;
+
+    private Farm farm;
 
     @BeforeEach
     public void setUp() {
-        farm = new Farm(console, "test");
-    }
-
-    @AfterEach
-    public void tearDown() {
-        farm = null;
+        Guice.createInjector(Modules.override(new GuiceModule()).with(BoundFieldModule.of(this))).injectMembers(this);
+        farm = farmFactory.create("test");
     }
 
     @Test

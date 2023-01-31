@@ -9,9 +9,6 @@ import dev.miikat.farm.util.Randomgen;
 
 public class Cat extends Animal {
 
-	@Inject
-	private Console console;
-
 	private class PetActivity implements AnimalActivity {
 
 		@Override

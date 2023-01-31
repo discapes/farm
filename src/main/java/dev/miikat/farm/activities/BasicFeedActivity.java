@@ -1,7 +1,5 @@
 package dev.miikat.farm.activities;
 
-import com.google.inject.Inject;
-
 import dev.miikat.farm.Console;
 import dev.miikat.farm.animals.Animal;
 
