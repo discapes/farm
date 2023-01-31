@@ -1,5 +1,5 @@
-name: build_jar
-run-name: Build jar file artifact.
+name: test_and_package
+run-name: Build jar file artifact and run tests.
 on:
   push:
     branches:
